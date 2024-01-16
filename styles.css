@@ -1,6 +1,334 @@
-*{
+/* Global Designs */
+
+* {
     font-family: 'Mulish', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --title-color: #131318;
+    --btn-color: #FF5400;
+}
+
+.section-title {
+    color: var(--title-color);
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+.section-description {
+    color: rgba(19, 19, 24, 0.70);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 24px 0px;
+}
+
+.btn-primary {
+    border-radius: 8px;
+    background: #FF5400;
+    color: #FFF;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 14px 35px;
+    border: 0;
+}
+
+/* Global designs end here */
+header {
+    padding: 50px 135px 100px 135px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.intro h1 span{
+    color: var(--btn-color);
+}
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin-right: 44px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #424247;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.active {
+    color: var(--btn-color);
+}
+
+.banner {
+    margin-top: 50px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url('Images/Group\ 13\ \(1\)\ \(1\).png');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+
+.banner h2 {
+    color: #FFF;
+    font-size: 64px;
+    font-weight: 800;
+}
+
+.banner p {
+    margin-top: 24px;
+    margin-bottom: 48px;
+    color: #FFF;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.form-input-dropdown {
+    display: flex;
+    gap: 24px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.30);
+    padding: 16px;
+}
+
+input,
+select {
+    outline: none;
+    padding: 16px;
+    width: 174px;
+    height: 52px;
+    border-radius: 8px;
+    background: #FFF;
+    border: 0;
+}
+
+select {
+    color: rgba(19, 19, 24, 0.50);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.tours {
+    display: flex;
+    padding: 50px 135px 100px 135px;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.tours-contents {
+    width: 50%;
+
+}
+
+.images {
+    width: 50%;
+}
+
+.places {
+    padding: 0px 135px 100px 135px;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+
+}
+
+.first-image {
+    grid-column: 1/ span 6;
+    grid-row: 1/ span 1;
+    position: relative;
+
+}
+
+.second-image {
+    grid-column: 7/ span 6;
+    grid-row: 1/ span 1;
+    position: relative;
+}
+
+.third-image {
+    grid-column: 1 / span 4;
+    grid-row: 2/ span 1;
+    position: relative;
+}
+
+.fourth-image {
+    grid-row: 2 / span 1;
+    grid-column: 5 / span 5;
+    position: relative;
+}
+
+.fifth-image {
+    grid-row: 2/ span 1;
+    grid-column: 10/ span 3;
+    position: relative;
+}
+
+.sixth-image {
+    grid-column: 1/ span 5;
+    position: relative;
+}
+
+.seventh-image {
+    grid-column: 6 / span 7;
+    position: relative;
+}
+
+.centered {
+    color: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.why-us {
+    /* text-align: center; */
+    padding: 0px 135px 100px 135px;
+}
+
+.cards {
+    display: flex;
+    gap: 24px;
+    justify-content: flex-start;
+}
+
+.card-container-1 {
+    border-radius: 16px;
+    border: 1px solid rgba(251, 181, 99, 0.20);
+    background: rgba(251, 181, 99, 0.05);
+    padding: 32px;
+}
+
+.card-container-2 {
+    border-radius: 16px;
+    border: 1px solid rgba(41, 206, 246, 0.20);
+    background: rgba(41, 206, 246, 0.05);
+    padding: 32px;
+}
+
+.card-container-3 {
+    border-radius: 16px;
+    border: 1px solid rgba(233, 68, 68, 0.20);
+    background: rgba(233, 68, 68, 0.05);
+    padding: 32px;
+    max-width: 573px;
+    height: 284px;
+}
+
+.centered-container {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-title {
+    color: #131318;
+    font-size: 24px;
+    font-weight: 800;
+    margin: 32px 0px 16px 0px;
+}
+
+.bangladesh-intro {
+    display: flex;
+    padding: 0px 135px 100px 135px;
+    align-items: center;
+    gap: 24px;
+}
+
+.intro-contents {
+    width: 50%;
+}
+
+.video-column {
+    width: 50%;
+}
+
+.intro-contents li {
+    margin-top: 16px;
+}
+
+.intro-contents button {
+    margin-top: 32px;
+}
+
+.newsletter {
+    display: flex;
+    padding: 0px 135px;
+    gap: 24px;
+}
+
+.form {
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #FF5400;
+}
+
+.form p {
+    margin: 24px 0px;
+}
+
+.newsletter input {
+    border-radius: 8px;
+    background: rgba(19, 19, 24, 0.05);
+    outline: none;
+    padding: 16px;
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+hr{
+    background-color: rgba(19, 19, 24, 0.10);
+    height: 1px;
+}
+footer{
+    text-align: center;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 110px 0px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(19, 19, 24, 0.05);
+}
+.footer-hr{
+    background: rgba(19, 19, 24, 0.10);
+    height: 1px;
+    margin: 50px 0px;
+    width: 60%;
+}
+.social-icons img{
+    margin-right: 24px;
 }
