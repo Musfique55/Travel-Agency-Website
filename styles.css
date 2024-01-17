@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 :root {
@@ -51,9 +52,11 @@ nav {
     align-items: center;
     gap: 15px;
 }
-.intro h1 span{
+
+.intro h1 span {
     color: var(--btn-color);
 }
+
 nav ul {
     display: flex;
     align-items: center;
@@ -217,6 +220,13 @@ select {
 .why-us {
     /* text-align: center; */
     padding: 0px 135px 100px 135px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle {
+    text-align: center;
 }
 
 .cards {
@@ -245,7 +255,6 @@ select {
     background: rgba(233, 68, 68, 0.05);
     padding: 32px;
     max-width: 573px;
-    height: 284px;
 }
 
 .centered-container {
@@ -288,6 +297,7 @@ select {
     display: flex;
     padding: 0px 135px;
     gap: 24px;
+    position: relative;
 }
 
 .form {
@@ -300,6 +310,10 @@ select {
     margin: 24px 0px;
 }
 
+.input {
+    width: 100%;
+}
+
 .newsletter input {
     border-radius: 8px;
     background: rgba(19, 19, 24, 0.05);
@@ -309,11 +323,45 @@ select {
     margin-top: 16px;
     margin-bottom: 16px;
 }
-hr{
+
+.z-index {
+    border-radius: 16px;
+}
+
+.rotate {
+    background-color: var(--btn-color);
+    width: 324px;
+    height: 120px;
+    transform: rotate(-19.628deg);
+    border-radius: 16px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: 51px;
+    right: 141px;
+}
+
+.rotate p {
+    color: #FFF;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.rotate h4 {
+    color: #FFF;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+hr {
     background-color: rgba(19, 19, 24, 0.10);
     height: 1px;
 }
-footer{
+
+footer {
     text-align: center;
     margin-top: 100px;
     display: flex;
@@ -323,12 +371,194 @@ footer{
     justify-content: center;
     background: rgba(19, 19, 24, 0.05);
 }
-.footer-hr{
+
+.footer-hr {
     background: rgba(19, 19, 24, 0.10);
     height: 1px;
     margin: 50px 0px;
     width: 60%;
 }
-.social-icons img{
+
+.social-icons img {
     margin-right: 24px;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width:600px) {
+    .newsletter {
+        flex-direction: column;
+        padding: 16px;
+        gap: 20px;
+
+    }
+
+    .form {
+        padding: 20px;
+    }
+
+    .newsletter img {
+        width: 100%;
+    }
+
+    .bangladesh-intro {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .intro-contents {
+        width: 100%;
+    }
+
+    .video-column {
+        width: 100%;
+    }
+
+    .why-us {
+        padding: 20px;
+        display: flex;
+        fl
+    }
+
+    .cards {
+        flex-wrap: wrap;
+    }
+
+    .card-container-3 {
+        height: auto;
+    }
+
+    .rotate {
+        bottom: 56px;
+        right: 0px;
+        width: 214.023px;
+        height: 79.268px;
+        border-radius: 10.569px;
+        bottom: 52px;
+        right: 23px;
+    }
+
+    .rotate p {
+        color: #FFF;
+        text-align: center;
+        font-size: 15.854px;
+        font-weight: 400;
+    }
+
+    .rotate h4 {
+        color: #FFF;
+        font-size: 21.138px;
+        font-weight: 800;
+    }
+
+    .places {
+        padding: 20px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .first-image {
+        grid-column: 1/ span 12;
+        grid-row: 1/ span 1;
+        position: relative;
+
+    }
+
+    .second-image {
+        grid-column: 1/ span 12;
+        grid-row: 2/ span 1;
+        position: relative;
+    }
+
+    .third-image {
+        grid-column: 1 / span 12;
+        grid-row: 3/ span 1;
+        position: relative;
+    }
+
+    .fourth-image {
+        grid-row: 4 / span 1;
+        grid-column: 1/ span 12;
+        position: relative;
+    }
+
+    .fifth-image {
+        grid-row: 5/ span 1;
+        grid-column: 1/ span 12;
+        position: relative;
+    }
+
+    .sixth-image {
+        grid-column: 1/ span 12;
+        position: relative;
+    }
+
+    .seventh-image {
+        grid-column: 1 / span 12;
+        position: relative;
+    }
+
+    .tours {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .tours-contents {
+        width: 100%;
+    }
+
+    .image img {
+        width: 100%;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .form-input-dropdown {
+        flex-direction: column;
+        margin-bottom: 50px;
+        width: 90%;
+    }
+
+    .banner {
+        height: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+    }
+
+    .banner h2 {
+        color: #FFF;
+        font-size: 22px;
+        font-weight: 800;
+        margin-top: 32px;
+    }
+
+    .banner p {
+        color: #FFF;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+    }
+    input, select{
+        width: 100%;
+    }
+    nav{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul li {
+        margin-bottom: 16px;
+    }
+    nav ul{
+        flex-direction: column;
+        margin-top: 20px;
+    }
 }
